@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add some basic styling to the div box */
+        #outputBox {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            overflow-y: scroll;
+            max-height: 150px;
+        }
+
+        /* Styling for the images */
+        .simulatorImage {
+            max-width: 100px;
+            max-height: 100px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        // JavaScript function to handle "Turn On" button click
+        function startSimulator() {
+            // Get the div box element
+            var outputBox = document.getElementById('outputBox');
+
+            // Add images to the div box
+            outputBox.innerHTML += '<img src="download1.png" class="simulatorImage">';
+            
+            // Add more images as needed
+
+            // Optional: Scroll to the bottom to show the latest content
+            outputBox.scrollTop = outputBox.scrollHeight;
+        }
+
+        // JavaScript function to handle "Reset" button click
+        function resetSimulator() {
+            // Clear the content of the div box
+            document.getElementById('outputBox').innerHTML = '';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Button to start the simulator -->
+    <button onclick="startSimulator()">Turn On</button>
+
+    <!-- Button to reset the simulator -->
+    <button onclick="resetSimulator()">Reset</button>
+
+    <!-- Div box to display the images -->
+    <div id="outputBox"></div>
+
+</body>
+</html>
